@@ -1,0 +1,313 @@
+{dede:include filename="head.htm"/}
+	<!--header end-->
+	<div id="toutiao">
+		<h1> 
+        	{dede:arclist row='1' titlelen='50' orderby='pubdate' typeid='1' flag='h'}
+<a href="[field:arcurl/]" style="color:red;text-decoration:none">[[field:title/]]</a>
+ {/dede:arclist}
+</h1>
+		<ul>
+	{dede:arclist row='4' titlelen='50' orderby='pubdate' typeid='1' flag='c'}		 
+<li><a href="[field:arcurl/]">[[field:title/]]</a></li>
+ {/dede:arclist}
+		</ul>
+	</div>
+	<div class="wrap960">
+		<div id="qiehuan">
+			<div id="FocusObj">
+ 				
+<div id="myFocus20136843515647">
+<div class="loading"></div>
+ <div class="pic"><!--图片列表-->
+ <!-- size: 280px * 192px -->
+   <script language='javascript'>
+linkarr = new Array();
+picarr = new Array();
+textarr = new Array();
+var swf_width=450;
+var swf_height=290;
+//文字颜色|文字位置|文字背景颜色|文字背景透明度|按键文字颜色|按键默认颜色|按键当前颜色|自动播放时间|图片过渡效果|是否显示按钮|打开方式
+var configtg='0xffffff|0|0xb81c22|5|0xffffff|0xC5DDBC|0x000033|3|3|1|_blank';
+var files = "";
+var links = "";
+var texts = "";
+//这里设置调用标记
+{dede:arclist flag='f' row='5'}
+linkarr[[field:global.autoindex/]] = "[field:arcurl/]";
+picarr[[field:global.autoindex/]]  = "[field:litpic/]";
+textarr[[field:global.autoindex/]] = "[field:fulltitle function='html2text(@me)'/]";
+{/dede:arclist}
+for(i=1;i<picarr.length;i++){
+if(files=="") files = picarr[i];
+else files += "|"+picarr[i];
+}
+for(i=1;i<linkarr.length;i++){
+if(links=="") links = linkarr[i];
+else links += "|"+linkarr[i];
+}
+for(i=1;i<textarr.length;i++){
+if(texts=="") texts = textarr[i];
+else texts += "|"+textarr[i];
+}
+document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
+document.write('<param name="movie" value="{dede:global.cfg_templeturl /}/default/style/images/bcastr3.swf"><param name="quality" value="high">');
+document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+document.write('<param name="FlashVars" value="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'&bcastr_config='+configtg+'">');
+document.write('<embed src="{dede:global.cfg_templeturl /}/default/images/bcastr3.swf" wmode="opaque" FlashVars="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'&bcastr_config='+configtg+'&menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>');
+</script>
+</div>
+</div>
+			</div>
+		</div>
+		<div id="xinwen">
+			<div id="xwtitle"><h1><em><a href="/plus/list.php?tid=1">更多 </a></em>党风廉政 </h1></div>
+			<ul>
+	
+    {dede:arclist row='9' titlelen='50' orderby='pubdate' typeid='1' idlist=''}			   
+<li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+ 
+{/dede:arclist}
+			</ul>
+		</div>
+		<div id="zuzh">
+			<div id="zztitle"><h1>中国民情调研（网）</h1></div>
+			<ul>
+				 
+<li><a href="/plus/list.php?tid=77" target="_blank">关于我们</a></li>
+ 
+<li><a href="/plus/list.php?tid=78" target="_blank">专家顾问</a></li>
+ 
+<li><a href="/plus/list.php?tid=79" target="_blank">领导关怀</a></li>
+ 
+<li><a href="/plus/list.php?tid=80" target="_blank">组织结构</a></li>
+ 
+<li><a href="/plus/list.php?tid=57" target="_blank">分支机构</a></li>
+ 
+<li><a href="/plus/list.php?tid=82" target="_blank">中央纪委信访室</a></li>
+ 
+<li><a href="/plus/list.php?tid=83" target="_blank">最高检举报中心</a></li>
+				<li><a href="http://chaxun.zgmqdy.org" target="_blank">人员查询</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="hx10"></div>
+	<div id="shilb">
+		<div class="sanlx">
+			  <h1><em><a href="/plus/list.php?tid=64">更多</a></em>人大政协</h1>
+		      <div id="demo" style="width:290px;height:290px;overflow: hidden;">
+			      <div id="demo1">
+			      	<ul>
+ {dede:arclist row='11' titlelen='50' orderby='pubdate' typeid='64' idlist=''}			   
+<li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+ 
+{/dede:arclist}
+					</ul>
+				  </div>
+		      </div>
+		</div>
+		<div class="sanl" style="margin:0 10px;background:none;">
+			<h1><em><a href="/plus/list.php?tid=65">更多</a></em>政法丰碑</h1>
+			<ul>
+				 
+ {dede:arclist row='11' titlelen='50' orderby='pubdate' typeid='65' idlist=''}			   
+<li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+ 
+{/dede:arclist}
+			</ul>
+		</div>
+		<div id="ship">
+			<h1>维权调研</h1>
+			<a href="###" target="_blank"><img src="{dede:global.cfg_templets_skin/}/style/images/wanzhong.jpg"></a>
+		</div>
+		<div id="gqws"><embed src="{dede:global.cfg_templets_skin/}/style/swf/001.swf" wmode="transparent"></div>
+<!--
+		<div id="gqws">
+			<a href="http://www.zgmw.net.cn" target="_blank" class="fl"><img src="{dede:global.cfg_templets_skin/}/style/images/zgmwl.jpg"></a><a href="http://www.zgmw.net.cn" target="_blank" class="fr" ><img src="{dede:global.cfg_templets_skin/}/style/images/gqyqwl.jpg"></a>
+		</div>
+-->
+	</div>
+	<div class="bananer_960" style="margin-top:5px;"><img src="{dede:global.cfg_templets_skin/}/style/images/kongtan.jpg"></div>
+	<div class="hx10"></div>
+	<div class="wrap960">
+		<div class="wrap704">
+			<div class="tgbs_tit">
+				<h2 style="padding:0 230px 0 18px;border-right:1px solid #ccc;">创新发展</h2>
+				<h2>执法监督</em></h2>
+			</div>
+			<div id="labels_con03" class="wrap_gray h323">
+				<!--hidden_1 start-->
+				<div>
+						<div class="wrap288">
+		{dede:arclist row='1' titlelen='50' orderby='pubdate' typeid='58' idlist='' type='image.'}					
+<h4 class="wrap_stit"> <a href="[field:arcurl/]" target="_blank">[field:title/] </a></h4>
+<div class="wrap_scon">
+	<a href="[field:arcurl/]"><img alt="[field:title/]" src="[field:picname/]"></a>
+	<p> [field:description/]...<a href="[field:arcurl/]">详细</a></p>
+</div>
+{/dede:arclist}
+<ul class="list_item_s">
+ {dede:arclist row='8' titlelen='50' orderby='pubdate' typeid='58' idlist=''}			   
+<li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+{/dede:arclist}
+</ul>
+						</div>
+						<ul class="list_item wrap354">	
+							 
+ {dede:arclist row='12' titlelen='50' orderby='pubdate' typeid='67' idlist=''}			   
+<li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+{/dede:arclist}
+						</ul>
+				</div>
+				<!--hidden_1 end-->
+			</div>
+		</div>
+		<div class="wrap246">
+			<div class="r_titthree"><h2>食药安全</h2></div>
+			<div class="h686">
+				<ul class="list_picfont">
+{dede:arclist row='1' titlelen='50' orderby='pubdate' typeid='68' idlist='' type='image.'}	
+<li><a href="[field:arcurl/]" target="_blank"><img src="[field:picname/]" border="0" alt="[field:title/]"></a>
+	<h4><a href="[field:arcurl/]" target="_blank">[field:title/]</a></h4>
+	<p>[field:description/]...<a href="[field:arcurl/]" target="_blank">[详细]</a></p>
+</li>
+{/dede:arclist}
+</ul>
+<ul class="list_item">		
+ {dede:arclist row='9' titlelen='50' orderby='pubdate' typeid='68' idlist=''}			   
+<li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+{/dede:arclist}
+</ul>
+			</div>
+		</div>
+	</div>
+	<div class="wrap960">
+		<div class="wrap704">
+			<div class="tgbs_tit add_redbg">
+				<h2 style="padding:0 230px 0 18px;border-right:1px solid #ccc;">扶贫开发</h2>
+				<h2>环境保护</em></h2>
+			</div>
+			<div class="wrap_gray h317" id="labels_con01">
+				<!--hidden_1 start-->
+				<div>
+						<div class="wrap288">
+							
+	{dede:arclist row='1' titlelen='50' orderby='pubdate' typeid='60' idlist='' type='image.'}					
+<h4 class="wrap_stit"> <a href="[field:arcurl/]" target="_blank">[field:title/] </a></h4>
+<div class="wrap_scon">
+	<a href="[field:arcurl/]"><img alt="[field:title/]" src="[field:picname/]"></a>
+	<p> [field:description/]...<a href="[field:arcurl/]">详细</a></p>
+</div>
+{/dede:arclist}
+<ul class="list_item_s">
+ {dede:arclist row='8' titlelen='50' orderby='pubdate' typeid='60' idlist=''}			   
+<li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+{/dede:arclist}
+</ul>
+						</div>
+						
+						<ul class="list_item wrap354">	
+							 
+ {dede:arclist row='12' titlelen='50' orderby='pubdate' typeid='11' idlist=''}			   
+<li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+{/dede:arclist}
+						</ul>
+				</div>
+				<!--hidden_1 end-->
+			</div>
+		</div>
+		<div class="wrap246">
+			<div class="r_titthree"><h2>文化教育 </h2><a href="/plus/list.php?tid=70">更多</a></div>
+			<div class="h686 h286 h327" style="height:320px;">
+				<div class="clearfix pic_list">
+<p>
+{dede:arclist row='2' titlelen='50' orderby='pubdate' typeid='70' idlist='' type='image.'}		
+<a href="[field:arcurl/]" target="_blank"><img src="[field:picname/]" border="0" alt="[field:title/]">[field:title/]</a>
+{/dede:arclist}
+</p>
+</div>
+<ul class="list_item">		
+ {dede:arclist row='8' titlelen='50' orderby='pubdate' typeid='70' idlist=''}			   
+<li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+{/dede:arclist}
+</ul>
+			</div>
+		</div>
+	</div>
+	<div class="wrap960">
+		<div class="wrap_right"><a href="/" target="_blank"><img src="{dede:global.cfg_templets_skin/}/style/images/zgmm.jpg"></a></div>
+		<div class="wrap_left"><img src="{dede:global.cfg_templets_skin/}/style/images/jzg.jpg"></div>
+	</div>
+	<div class="wrap960">
+		<div class="wrap702">
+			<div class="wrap346">
+				<div class="r_titfour"><h2>生育健康</h2><a href="/plus/list.php?tid=71">更多</a></div>
+				
+	{dede:arclist row='1' titlelen='50' orderby='pubdate' typeid='71' idlist='' type='image.'}					
+<h4 class="wrap_stit"> <a href="[field:arcurl/]" target="_blank">[field:title/] </a></h4>
+<div class="wrap_scon">
+	<a href="[field:arcurl/]"><img alt="[field:title/]" src="[field:picname/]"></a>
+	<p> [field:description/]...<a href="[field:arcurl/]">详细</a></p>
+</div>
+{/dede:arclist}
+<ul class="list_item_s">
+ {dede:arclist row='6' titlelen='50' orderby='pubdate' typeid='71' idlist=''}			   
+<li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+{/dede:arclist}
+</ul>
+			</div>
+			<div class="wrap346" style="margin:0 0 0 10px" "="">
+				<div class="r_titfour"><h2>省市动态</h2><a href="/plus/list.php?tid=19">更多</a></div>
+				<ul class="list_item_s">
+	 {dede:arclist row='10' titlelen='50' orderby='pubdate' typeid='19' idlist=''}			   
+<li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+{/dede:arclist}
+				</ul>
+			</div>
+		</div>
+		<div class="wrap246">
+			<div class="r_titthree"><h2>中国智造</h2><a href="/plus/list.php?tid=69">更多</a></div>
+			<div class="h686 h286">
+				<ul class="list_item">		
+	 {dede:arclist row='11' titlelen='50' orderby='pubdate' typeid='69' idlist=''}			   
+<li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+{/dede:arclist}
+</ul>
+			</div>
+		</div>
+	</div>
+	<div class="wrap960">
+		<div class="tgbs_tit add_bluebg">
+			<h2>省市动态</em></h2>
+			<ul id="labels_id02">
+				<li class=""><a href="/plus/list.php?tid=13">群众路线</a></li>
+				<li class=""><a href="/plus/list.php?tid=72">地方呼声</a></li>
+				<li class="current"><a href="/plus/list.php?tid=74">视频焦点</a></li>
+                                <li class=""><a href="/plus/list.php?tid=19">今日要闻</a></li>
+			        <li class=""><a href="/plus/list.php?tid=19">艺术舞台</a></li>
+                                <li class=""><a href="/plus/list.php?tid=19">爱心慈善</a></li>
+                        </ul>
+			<a href="###" class="more_s">更多</a>
+		</div>
+		<div class="wrap_gray h298" id="labels_con02">
+			<div class="pic_listwo" style="display: none;">
+   
+   {dede:arclist row='6' titlelen='50' orderby='pubdate' typeid='13' idlist=''}  			   
+<a href="[field:arcurl/]" target="_blank" class="fc2"><img src="[field:picname/]" border="0" width="155" height="190">[field:title/]</a>
+ {/dede:arclist}
+		    </div>
+			<div class="pic_listwo hidden" style="display: none;">    
+      {dede:arclist row='6' titlelen='50' orderby='pubdate' typeid='72' idlist=''}  			   
+<a href="[field:arcurl/]" target="_blank" class="fc2"><img src="[field:picname/]" border="0" width="155" height="190">[field:title/]</a>
+ {/dede:arclist}
+ 		    </div>
+			<div class="pic_listwo hidden" style="display: block;">    
+       {dede:arclist row='6' titlelen='50' orderby='pubdate' typeid='74' idlist=''}  			   
+<a href="[field:arcurl/]" target="_blank" class="fc2"><img src="[field:picname/]" border="0" width="155" height="190">[field:title/]</a>
+ {/dede:arclist}
+		    </div>
+		</div>
+	</div>
+	
+{dede:include filename="friendlink.htm"/}
+{dede:include filename="footer.htm"/}

@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="{dede:global.cfg_templets_skin/}/style/css/common_v.css" rel="stylesheet" type="text/css">
+<link href="{dede:global.cfg_templets_skin/}/style/css/index_v.css" rel="stylesheet" type="text/css">
+<script src="{dede:global.cfg_templets_skin/}/style/js/date.js" language="javascript" type="text/javascript"></script>
+<script src="{dede:global.cfg_templets_skin/}/style/js/date.js" language="javascript" type="text/javascript"></script>
+<script src="{dede:global.cfg_templets_skin/}/style/js/jquery-1.4.2.min.js" language="javascript" type="text/javascript"></script>
+<script src="{dede:global.cfg_templets_skin/}/style/js/common_v.js" language="javascript" type="text/javascript"></script>
+<script src="{dede:global.cfg_templets_skin/}/style/js/pic_scroll.js" language="javascript" type="text/javascript"></script>
+<!--<base target="_blank">-->
+</head>
+<body>
+    <!--header start-->
+    <div id="site_nav">
+    <div class="site_navl">您好！今天是<script language="javascript" type="text/javascript">CAL();</script><font color="#333" style="font-size:9pt;font-family: 宋
+体;"> </font></div>
+    <div class="site_navr"><span>投诉投稿邮箱：zgmqdy@163.com</span>
+    <a href="http://chaxun.zgmqdy.org">人员查询</a>
+</div>
+</div>
+<div id="header">
+<style>#header{height:auto;margin-bottom:5px;margin-top:5px;}
+#nav {
+    border-radius: 5px;
+}
+</style>
+<a href="/"><img src="/images/indextop.jpg"/></a>
+</div>
+<div id="nav">
+    <ul>
+        <li>
+                <p><b>聚焦</b><a target="_blank" href="/plus/list.php?tid=58">创新发展</a>
+                <a target="_blank" href="/plus/list.php?tid=3">党风廉政</a>
+                <a target="_blank" href="/plus/list.php?tid=64">人大政协</a>
+</p>
+                <p><b>高层</b><a target="_blank" href="/plus/list.php?tid=65">政法丰碑</a>
+                <a target="_blank" href="/plus/list.php?tid=66">维权调研</a>
+                <a target="_blank" href="/plus/list.php?tid=67">执法监督</a></p>
+        </li>
+        <li>
+                <p><b>民情</b><a target="_blank" href="/plus/list.php?tid=60">扶贫开发</a>
+                <a target="_blank" href="/plus/list.php?tid=68">食药安全</a>
+                <a target="_blank" href="/plus/list.php?tid=11">环境保护</a></p>
+                <p><b>关注</b><a target="_blank" href="/plus/list.php?tid=69">中国智造</a>
+                <a target="_blank" href="/plus/list.php?tid=70">文化教育</a>
+                <a target="_blank" href="/plus/list.php?tid=71">生育健康</a></p>
+        </li>
+        <li class="s3">
+                <p><b>基层</b><a target="_blank" href="/plus/list.php?tid=13">群众路线</a>
+                <a target="_blank" href="/plus/list.php?tid=72">地方呼声</a>
+                <a target="_blank" href="/plus/list.php?tid=73">今日要闻</a></p>
+                <p><b>民生</b><a target="_blank" href="/plus/list.php?tid=75">艺术舞台</a>
+                <a target="_blank" href="/plus/list.php?tid=74">视频焦点</a>
+                <a target="_blank" href="/plus/list.php?tid=76">军民共建</a></p>
+    
+                </li>
+    </ul>
+</div>
+<style>
+.sheng{width:960px;height:100px;background:#f7f7f7;margin:0 auto;margin-top:5px;margin-bottom:5px}
+.sheng .left{width:80px;height:80px;text-align:center;line-height:30px;padding-top:20px;font-size:18px;background:#333;color:#fff;font-weight:bold;float:left}
+.sheng .right{float:right;width:877px;height:95px;background:#B81C22;padding-top:5px}
+.sheng .right a{display:inline-block;width:72px;font-size:14px;color:#fff;height:25px;line-height:25px;text-align:center;margin-top:5px;margin-left:5px}
+.sheng .right a:hover{background:#F60}
+</style>
+<div class="sheng">
+<div class="left">地方</br>频道</div>
+<div class="right">
+{dede:sql sql="SELECT typename,typedir FROM dede_arctype where reID = 19 ORDER BY sortrank ASC " }  
+<a href="[field:typedir function='str_replace("{cmspath}","",@me)'/]/]">[field:typename/]</a>
+{/dede:sql} 
+</div>
+</div>

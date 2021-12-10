@@ -1,0 +1,39 @@
+{dede:include filename="head.htm"/}
+	<!--header end-->
+	<div id="main_wzlb">
+	<div class="main_wz">您当前位置：{dede:field name='position'/}</div>
+	<div class="main_lbl">
+		<div id="xwitem_title"><h2>{dede:field name='typename' /}</h2></div>
+	    <div id="LB">
+	       
+	         <ul>
+    {dede:list pagesize='15'}
+   <li>[field:array runphp='yes']@me = (empty(@me['litpic']) ? "" : "<a href='{@me['arcurl']}' class='preview'><img src='{@me['litpic']}'/></a>"); [/field:array]<h2><a href="[field:arcurl/]" target="_blank">[field:title/]</a></h2>
+           <p>[field:description/]...<a href="[field:arcurl/]" target="_blank">[详细]</a></p>
+   </li>
+    {/dede:list}
+  
+</ul>
+<div align="right"   id="fenye">
+	<ul>
+   {dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="5"/}
+   </ul>
+</div>
+	     </div>
+	     
+	</div>
+	<div class="main_lbr">
+	           <div id="bt"><h3><span>推</span>荐文章</h3></div>
+		  <div id="zxwz">
+			  <ul>
+			
+             {dede:arclist row=10 orderby=click titlelen=52 }     
+<li><div class="top[field:global runphp='yes' name=autoindex][/field:global]">[field:global runphp='yes' name=autoindex][/field:global]</div><a href="[field:arcurl/]">[field:title/]</a></li> 
+			{/dede:arclist}
+			  </ul>
+			  
+		  </div>
+	</div>
+	</div>
+{dede:include filename="friendlink.htm"/}
+{dede:include filename="footer.htm"/}

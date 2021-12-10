@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><?php echo $cfg_webname; ?>- 伪静态</title>
+
+<style type="text/css">
+html,body,form,h1,h2,h3,h4,h5,ul,dl,dt,dd,div,p,img,li{margin:0;padding:0;list-style:none;border:none;font-size:12px;}
+body{text-align:center;font-family:Tahoma,Geneva,sans-serif;background:#F1F1F1;}
+html{_background:url(about:black) no-repeat fixed;overflow-y:scroll}
+select,input,textarea{font-size:12px;font-family:Tahoma,Geneva,sans-serif;outline:none;}
+a:link,a:visited,a:active{text-decoration:none;}
+a:hover{text-decoration:underline;}
+.cao { width:500px; margin:20% auto;}
+#windown-content {
+    background: none repeat scroll 0% 0% #F4F4F4;
+    position: absolute;
+    border-radius: 5px;
+    padding-bottom: 5px;
+	border:1px solid #C3C3C3;
+}
+.a_title{background:#fff;height:38px;overflow:hidden;border-bottom:1px solid #ccc;color:#333;font-size:14px;line-height:38px;height:38px;text-indent:10px;font-weight:bold;width:100%;border-radius:5px 5px 0 0;}
+.a_nr{background:#F4F4F4;margin:0 auto;padding:5px 0 0 0;overflow:hidden;}
+.a_nr p{margin:0 auto;padding-top:10px;text-align:left;}
+.a_nr p label.for-label{width:50px;float:left;margin-left:30px;margin-top:6px;color:#333;}
+.a_nr p input.text,.a_nr p .textarea{outline:none;border:1px solid #CCC;padding:5px;-webkit-box-shadow:#DFDFDF 0 1px 2px 0 inset;box-shadow:#DFDFDF 0 1px 2px 0 inset;width:258px;color:#666;height:25px;background:#fff;line-height:25px;overflow:hidden;}
+.a_nr p input.text:focus,.a_nr p .textarea:focus{border:1px solid #50B30E!important;-webkit-box-shadow:#C7FFA2 0 1px 2px 0 inset;box-shadow:#C7FFA2 0 1px 2px 0 inset;outline:none;}
+.a_nr p .textarea{width:300px;height:100px;font-size:12px;margin:0;resize:none;}
+.a_nr p.an{text-align:center;padding:15px 0;}
+.a_nr p.an input{margin-right:15px;}
+
+.anbu1{ margin-top:10px;cursor:pointer;font-size:14px;height:35px; color:#fff;border: 1px solid #4798D6;background-color: #5CAAE6; border-radius:2px;font-family: "Microsoft YaHei"; }
+.anbu1:hover{background-color: #61B3F2;}
+
+ </style>
+
+</head>
+<body>
+ 
+<?php if($a=="first"){?>
+ 
+  <?php }else{?>
+
+<div class="cao">
+<div style="width: 430px; margin:0 auto;" id="windown-content">
+<div class="a_title">伪静态插件使用方法：</div>
+ <div class="a_nr">
+<p style=" width:430px; padding-left:20px;">一、后台系统→系统基本参数→核心设置→是否使用伪静态（选择是）。<br />
+		二、点击下面按钮生成伪静态规则。规则和静态目录设置一致。
+</p>
+ <p class="an"><input type="button" value="生态伪静态规则"  class="anbu1"onclick="location.href='htaccess.php?a=do'" /></p>
+</div></div>
+
+<?php }?>
+</div>
+</body>
+</html>
